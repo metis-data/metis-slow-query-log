@@ -1,0 +1,29 @@
+name: 'PostgreSQL Slow Query Log Analyzer'
+description: 'Collect slow query log data and analyze them'
+inputs:
+  metis_api_key:
+    description: metis api key project identifier
+    required: true
+    default: ''
+  github_token:
+    description: github token
+    required: true
+    default: ''
+  target_url:
+    description: target url
+    required: false
+    default: 'https://app.metisdata.io'
+  metis_exporter_url:
+    description: target url
+    required: false
+    default: 'https://ingest.metisdata.io'
+  foreign_table_name:
+    description: foreign_table_name
+    required: false
+  db_connection_string:
+    description: database connection string 
+    required: true
+    default: ''
+runs:
+  using: 'node16'
+  main: 'index.js'
